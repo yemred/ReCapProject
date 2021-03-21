@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class ColorDal : IColorDal
+    public class InMemoryColorDal : IColorDal
     {
         public void Add(Color entity)
         {

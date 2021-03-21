@@ -7,29 +7,29 @@ using System.Text;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class CarDal : ICarDal
+    public class InMemoryBrandDal : IBrandDal
     {
-        public void Add(Car entity)
+        public void Add(Brand entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Car entity)
+        public void Delete(Brand entity)
         {
             throw new NotImplementedException();
         }
 
-        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        public List<Brand> GetAll(Expression<Func<Brand, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public Car GeTById(Expression<Func<Car, bool>> filter)
+        public Brand GeTById(Expression<Func<Brand, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Car entitiy)
+        public void Update(Brand entitiy)
         {
             throw new NotImplementedException();
         }
