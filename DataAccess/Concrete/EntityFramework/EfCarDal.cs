@@ -6,10 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
+using System.Linq;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCarDal : EfEntityRepositoryBase<Car, ReCapContext> ICarDal
+    public class EfCarDal : EfEntityRepositoryBase<Car, ReCapContext>,ICarDal
     {
         public List<CarDetailDto> GetCarDetails()
         {
@@ -23,6 +24,7 @@ namespace DataAccess.Concrete.EntityFramework
                              select new CarDetailDto
                              {
                                  CarName = c.CarName,
+                                 Description = c.Description,
                                  BrandName = b.Name,
                                  ColorName = cl.Name,
                                  DailyPrice = c.DailyPrice
