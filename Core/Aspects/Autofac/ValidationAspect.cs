@@ -26,7 +26,8 @@ namespace Core.Aspects.Autofac
         }
         protected override void OnBefore(IInvocation invocation)
         {
-            // Reflection Kodu alt satır.Yani çalışma anında İnstance oluşturmadır. 
+            // Reflection Kodu alt satır.Yani çalışma anında İnstance oluşturmadır.
+            // Çalışma anında instance oluşturmak istersen, Activator.CreateInstance kullanırız
             var validator = (IValidator)Activator.CreateInstance(_validatorType);
             var entityType = _validatorType.BaseType.GetGenericArguments()[0];
             var entities = invocation.Arguments.Where(t => t.GetType() == entityType);
