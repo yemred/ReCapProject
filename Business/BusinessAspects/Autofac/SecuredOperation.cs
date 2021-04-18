@@ -15,7 +15,6 @@ namespace Business.BusinessAspects.Autofac
     {
         private string[] _roles;
 
-        // JWT göndererek istek yapıyoruz. Onun için herkes için bir istek oluşur.
         private IHttpContextAccessor _httpContextAccessor;
 
         public SecuredOperation(string roles)
@@ -25,7 +24,6 @@ namespace Business.BusinessAspects.Autofac
 
         }
 
-        // Üstüne yazdığın methodun önünde çalış demek
         protected override void OnBefore(IInvocation invocation)
         {
             var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();

@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results.Abstract;
 using Entities.Concrete;
+using Entities.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -14,6 +15,7 @@ namespace Business.Abstract
         IDataResult<List<Car>> GetCarsColorsId();
         IResult Add(Car car);
         IResult Update(Car car);
+        IDataResult<List<CarDetailDto>> GetCarDetails(int id);
        
     }
 }
