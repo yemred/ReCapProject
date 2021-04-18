@@ -17,7 +17,7 @@ namespace Business.ValidationRules.FluentValidation
             //
             // BrandId si 1 olanlar dailyPrice 50 eşit veya büyük olmalı
             RuleFor(c => c.DailyPrice).GreaterThanOrEqualTo(50).When(c => c.BrandId == 1);
-            RuleFor(c => c.CarName).Must(StartWithA);
+            //RuleFor(c => c.CarName).Must(StartWithA);
         }
 
         private bool StartWithA(string arg)
